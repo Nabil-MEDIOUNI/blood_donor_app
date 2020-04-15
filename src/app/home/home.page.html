@@ -1,0 +1,54 @@
+<ion-content>
+  <div style="height: 100%;width:100%;background-color: rgb(252, 248, 246);margin-top: -10px;">
+    <p style="text-align: center;margin-top: 5px;">
+      <img width="152px" src="../../assets/DonDuSang_Logo-Recovered.png" />
+    </p>
+
+    <div class="buttonss">
+      <div class="input-icons">
+        <i class="fa fa-envelope icon"> </i>
+        <input class="input-field" [(ngModel)]="user.email" name="user" type="email" placeholder="Email" />
+      </div>
+
+      <div class="input-icons">
+        <i class="fa fa-key icon"> </i>
+        <input class="input-field" type="password" name="user" [(ngModel)]="user.password" placeholder="Password" />
+      </div>
+      <button ion-button class="btn1" href="/menu" (click)="login()">Connectez-vous</button>
+      <div style="text-align: center;">
+        <button (click)="connectWithEmail()" class="btn1">
+          Mot de passe oublié?
+        </button>
+      </div>
+    </div>
+
+    <div style="text-align: center;margin-top: 8px;">
+      <ion-button style="width: 175px;" color="danger" (click)="Create()">
+        S'inscrire
+      </ion-button>
+    </div>
+
+    <p style="text-align: center;color:rgb(143, 143, 143);margin: 19px 0px;">__________________ ou ___________________</p>
+    <div class="buttonss">
+      <ion-button class="btn2" (click)="loginWithFb()">
+        <img width="64px" src="../../assets/facebook.png">Se
+        Connecter avec Facebook
+      </ion-button><br />
+      <ion-button color="light" class="btn3" (click)="loginWithGp()">
+        <img width="64px" style="float: left;" src="../../assets/search.png" alt="" />Se Connecter
+        avec Google</ion-button><br />
+    </div>
+    <br />
+
+    <div class="buttonss">
+      <p style="color: rgb(116, 116, 116);font-size:13px;">
+        En vous s'incrivant, vous acceptez<br />
+        nos
+        <span style="color: rgb(0, 0, 0)">conditions generales de service</span>
+        et<br />
+        notre
+        <span style="color: rgb(0, 0, 0)">politique de confidentialites</span>
+      </p>
+    </div>
+  </div>
+</ion-content>

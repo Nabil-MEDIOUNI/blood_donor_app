@@ -1,0 +1,51 @@
+:root {
+	--ion-safe-area-top: 20px;
+	--ion-safe-area-bottom: 22px;
+}
+.input-icons i {
+	position: absolute;
+}
+
+.input-icons {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.icon {
+	padding: 15px;
+	color: rgb(43, 43, 43);
+	min-width: 50px;
+	text-align: center;
+}
+
+.input-field {
+	width: 90%;
+	text-align: center;
+	outline: none;
+	padding: 10px;
+	border-radius: 3px;
+	border: 1px solid rgb(128, 127, 127);
+	transition: 0.4s ease-out;
+	&:focus {
+		border-color: rgb(63, 63, 63);
+	}
+}
+
+.btn {
+	border: none;
+	background-color: rgb(255, 87, 87);
+	border-radius: 3px;
+	box-shadow: 0.8px 0.8px 9px rgb(129, 129, 129);
+	width: 200px;
+	font-size: 20px;
+	padding: 5px;
+	outline: none;
+	margin-top: 20px;
+	color: rgb(230, 230, 230);
+	&:active {
+		box-shadow: none;
+		color: white;
+		outline: none;
+		background-color: rgb(252, 70, 70);
+	}
+}

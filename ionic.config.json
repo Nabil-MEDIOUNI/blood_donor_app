@@ -1,0 +1,7 @@
+{
+  "name": "Don_Du_Sang",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

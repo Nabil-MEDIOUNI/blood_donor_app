@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title><i class="fa fa-chevron-left icon"
+        style="float: left;width:20px;color:rgb(43, 42, 42);margin-right:-93px;margin-top:29px;" (click)="go_back()">
+      </i>
+      <div style="text-align: center;"><img style="margin-top:10px;" src="../../assets/DonDuSang_Logo-Recovered.png"
+          width="90px"></div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="created">
+    <ion-list-header>
+      <h5 style="color:rgb(185, 121, 0);">En Cours</h5>
+    </ion-list-header>
+    <ion-card>
+      <ion-card-content>
+        <div style="display: flex;">
+          <ion-avatar>
+            <img src="{{userData.photo}}" alt="">
+          </ion-avatar>
+          <div (click)="details()" style="margin-left:25px;">
+            <h2 style="text-transform: capitalize;color: rgb(8, 8, 8);">{{userData.name}}</h2>
+            <h3 style="text-transform: capitalize;color: rgb(168, 0, 0);font-weight: bold;">{{userData.bloodType}}</h3>
+            <h3 style="text-transform: capitalize;color:rgb(15, 15, 15);">{{userData.village}}</h3>
+            <p style="text-transform: capitalize;color:rgb(15, 15, 15);">{{userData.date}}</p>
+          </div>
+          <div style="margin-left: 85px;margin-top: 20px;">
+            <ion-icon style="font-size: 30px;" name="trash" item-right (click)="delete()"></ion-icon>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+  <div *ngIf="show" style="text-align: center;margin-top: 230px;">
+    <img width="80px" src="../../assets/mail-inbox-empty.png" alt="">
+    <h4 style="color:rgb(80, 80, 80);font-size: 20px;font-weight: bold;">Liste est vide</h4>
+  </div>
+</ion-content>

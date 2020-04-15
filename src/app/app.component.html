@@ -1,0 +1,55 @@
+<ion-app>
+  <ion-menu side="start" menuId="first" menuToggle auto-hide="false">
+    <ion-header> </ion-header>
+    <ion-content>
+      <br />
+      <div style="text-align: center;">
+        <img src="{{user.myphoto}}" width="90px" style="border-radius: 50%;" alt="" />
+        <h4>{{user.username}}</h4>
+      </div>
+      <br /><br />
+      <ion-list>
+        <ion-menu-toggle auto-hide="false">
+          <ion-item [routerDirection]="'root'" routerLink="/menu">
+            <ion-icon slot="start" name="home"></ion-icon>
+            <ion-label>
+              Acceuil
+            </ion-label>
+          </ion-item>
+          <ion-item [routerDirection]="'root'" routerLink="/profile">
+            <ion-icon slot="start" name="contact"></ion-icon>
+            <ion-label>
+              Mon profile
+            </ion-label>
+          </ion-item>
+          <ion-item (click)="list()">
+            <ion-icon slot="start" name="list"></ion-icon>
+            <ion-label>
+              Ma Liste
+            </ion-label>
+          </ion-item>
+          <ion-item [routerDirection]="'root'" routerLink="/contact-us">
+            <ion-icon slot="start" name="call"></ion-icon>
+            <ion-label>
+              Contactez-nous
+            </ion-label>
+          </ion-item>
+          <ion-item [routerDirection]="'root'" routerLink="/settings">
+            <ion-icon slot="start" name="settings"></ion-icon>
+            <ion-label>
+              Parametres
+            </ion-label>
+          </ion-item>
+          <ion-item (click)="log_out()">
+            <ion-icon slot="start" name="log-out"></ion-icon>
+            <ion-label>
+              Se deconnecter
+            </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="content1" main></ion-router-outlet>
+</ion-app>

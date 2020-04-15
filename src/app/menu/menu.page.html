@@ -1,0 +1,98 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title style="text-align: center;color: rgb(243, 243, 243);font-size: 22px;">
+      Page d'accueil
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button>
+        <ion-icon name="menu" color="light" size="large"></ion-icon>
+      </ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-segment [(ngModel)]="status">
+    <ion-segment-button value="request">
+      <ion-label>Demander du Sang</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="list">
+      <ion-label>Liste</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="map">
+      <ion-label>Carte</ion-label>
+    </ion-segment-button>
+  </ion-segment><br>
+  <div [ngSwitch]="status">
+    <div *ngSwitchCase="'request'">
+      <ion-list>
+        <ion-list-header>
+          <h2 style="color:rgb(161, 1, 1);">Détails de la Demande</h2>
+        </ion-list-header>
+        <ion-item>
+          <ion-label style="font-size: 16px;">Groupe Sanguin & Rhésus:</ion-label>
+          <!----p>Groupe Sanguin & Rhésus:</p><ion-button color="danger" (click)="presentAlert()">Choisir</ion-button-->
+          <ion-select name="userData" [(ngModel)]="userData.bloodType" (ionChange)="bloodFn();">
+            <ion-select-option *ngFor="let groupe of blood" value={{groupe.type}}>{{groupe.type}}
+            </ion-select-option>
+          </ion-select> <br>
+          <br>
+        </ion-item>
+      </ion-list>
+
+      <ion-list>
+        <ion-list-header>
+          <h5 style="color:rgb(34, 30, 30);">Détails Personnels</h5>
+        </ion-list-header>
+
+        <ion-list-header>Nom & Prenom</ion-list-header>
+        <div class="input-icons">
+          <input class="input-field" name="userData" [(ngModel)]="userData.name" type="text"
+            style="margin-left: 20px" />
+        </div>
+        <ion-list-header>Numéro de Contact</ion-list-header>
+        <div class="input-icons">
+          <input class="input-field" name="userData" [(ngModel)]="userData.phone" style="margin-left: 20px"
+            type="number" />
+        </div>
+        <ion-item>
+          <ion-label for="department" style="font-size: 16px;">Ville :</ion-label>
+          <ion-select color="danger" name="userData" [(ngModel)]="userData.village" (ionChange)="optionsFn();">
+            <ion-select-option *ngFor="let item of departments" value={{item.city}}>
+              {{item.city}}
+            </ion-select-option>
+          </ion-select>
+        </ion-item>
+        <div class="form-group">
+          <ion-list-header>Commentaire</ion-list-header>
+          <textarea class="input-field" style="text-align: left;margin-left: 20px" cols="5" rows="5" id="comment"
+            name="userData" [(ngModel)]="userData.description"></textarea>
+        </div><br>
+        <div style="text-align: center;">
+          <ion-button color="danger" (click)="CreateList()" style="width: 180px;height:45px;font-size:16px;">Envoyer
+          </ion-button>
+        </div>
+
+      </ion-list>
+    </div>
+    <div *ngSwitchCase="'list'">
+
+    </div>
+    <ion-grid *ngSwitchCase="'map'">
+      <ion-row>
+        <ion-col>
+          <div style="text-align: center;">
+            <button ion-button
+              style="margin-top: 250px;background-color: rgb(86, 86, 255);color:white;font-size: 18px;padding: 15px;border-radius: 4px;outline:none;"
+              (click)="showMap()">Ouvrir
+              Google Map
+            </button>
+          </div>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+
+<ion-footer></ion-footer>

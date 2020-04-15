@@ -1,0 +1,31 @@
+:root {
+	--ion-safe-area-top: 20px;
+	--ion-safe-area-bottom: 22px;
+}
+.input-icons i {
+	position: absolute;
+}
+
+.input-icons {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.icon {
+	padding: 15px;
+	color: rgb(43, 43, 43);
+	min-width: 50px;
+	text-align: center;
+}
+
+.input-field {
+	width: 90%;
+	outline: none;
+	padding: 10px;
+	border-radius: 3px;
+	border: 1px solid rgb(155, 155, 155);
+	transition: 0.4s ease-out;
+	&:focus {
+		border-color: rgb(82, 81, 81);
+	}
+}

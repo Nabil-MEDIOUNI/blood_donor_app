@@ -1,0 +1,80 @@
+.input-icons i {
+	position: absolute;
+}
+
+.input-icons {
+	width: 100%;
+	margin-bottom: 19px;
+}
+
+.icon {
+	padding: 12px;
+	color: rgb(43, 43, 43);
+	min-width: 50px;
+	text-align: center;
+}
+
+.input-field {
+	width: 80%;
+	outline: none;
+	padding: 7px;
+	font-size: 14px;
+	text-align: center;
+	transition: 0.3s ease-out;
+	border: 1px solid rgb(160, 160, 160);
+	&:focus {
+		border-color: rgb(82, 82, 82);
+	}
+}
+
+.buttonss {
+	text-align: center;
+}
+.btnn {
+	background-color: transparent;
+	outline: none;
+	font-family: sans-serif;
+	font-size: 18px;
+	color: red;
+	font-weight: 400;
+	text-align: right;
+}
+.btn1 {
+	background-color: transparent;
+	border: 1px solid rgb(75, 74, 74);
+	height: 34px;
+	width: 165px;
+	margin-top: 8px;
+	color: rgb(31, 31, 31);
+	border-radius: 3px;
+	font-family: sans-serif;
+	font-size: 13px;
+	outline: none;
+	box-shadow: none;
+	&:active {
+		box-shadow: 0.5px 0.5px 3px rgb(63, 63, 63);
+		color: rgb(252, 248, 246);
+		background-color: rgb(75, 74, 74);
+	}
+}
+.btn2 {
+	width: 260px;
+	height: 41px;
+	margin-right: 10px;
+	font-size: 11px;
+	img {
+		padding: 20px;
+		margin-left: -18px;
+	}
+}
+.btn3 {
+	width: 260px;
+	height: 41px;
+	font-size: 11px;
+	margin-right: 10px;
+	margin-top: 10px;
+	img {
+		padding: 20px;
+		margin-left: -35px;
+	}
+}

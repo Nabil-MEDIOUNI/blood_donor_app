@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-title><i class="fa fa-chevron-left icon"
+        style="float: left;width:20px;color:rgb(43, 42, 42);margin-top: 8px;margin-right:-80px;" (click)="go_back()">
+      </i>
+      <div style="text-align: center;"><img src="../../assets/DonDuSang_Logo-Recovered.png" width="90px"></div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div style="text-align: center;">
+    <div>
+      <br /><br />
+      <img src="{{user.myphoto}}" width="130px" style="border-radius: 50%;margin-bottom: 20px;" alt="" /><br />
+      <button (click)="picture()"
+        style="background-color: transparent;color: rgb(177, 0, 0);font-size: 16px;font-weight: bold;outline: none;">Modifiez
+        votre photo</button>
+    </div>
+    <br /><br>
+    <div class="input-icons">
+      <i class="fa fa-user icon"> </i>
+      <input class="input-field" type="text" name="user" [(ngModel)]="user.username">
+    </div>
+    <div class="input-icons">
+      <i class="fa fa-envelope icon"> </i>
+      <input class="input-field" type="text" name="user" [(ngModel)]="user.email" disabled>
+    </div>
+    <div class="input-icons">
+      <i class="fa fa-key icon"> </i>
+      <input class="input-field" type="password" name="user" [(ngModel)]="user.password">
+    </div>
+    <div class="input-icons">
+      <i class="fa fa-user-lock icon"> </i>
+      <input class="input-field" type="password" name="user" [(ngModel)]="user.passwordConfirmation">
+    </div>
+    <ion-list>
+      <ion-item>
+        <ion-label style="font-size: 16px;">Année de naissance :</ion-label>
+        <ion-select name="user" [(ngModel)]="user.date" (ionChange)="yearsFn();">
+          <ion-select-option value={{y}} *ngFor="let y of years">{{y}}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label for="department" style="font-size: 16px;">Ville :</ion-label>
+        <ion-select color="danger" name="user" [(ngModel)]="user.village" (ionChange)="optionsFn();">
+          <ion-select-option *ngFor="let item of departments" value={{item.city}}>
+            {{item.city}}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <span>Genre : </span>
+        <div *ngFor="let gender of genders">
+          <input style="margin-left:10px;" type="radio" name="sex" value="{{gender}}"
+            (change)="radioChanged($event)"><span style="margin-left: 5px;font-weight: 300;">{{gender}}</span>
+        </div>
+      </ion-item>
+      <ion-item>
+        <ion-label style="font-size: 16px;">Groupe Sanguin & Rhésus:</ion-label>
+        <!----p>Groupe Sanguin & Rhésus:</p><ion-button color="danger" (click)="presentAlert()">Choisir</ion-button-->
+        <ion-select name="user" [(ngModel)]="user.bloodType" (ionChange)="bloodFn();">
+          <ion-select-option *ngFor="let groupe of blood" value={{groupe.type}}>{{groupe.type}}
+          </ion-select-option>
+        </ion-select> <br>
+        <br>
+      </ion-item>
+    </ion-list>
+    <br><br>
+    <div>
+      <button (click)="modify()" class="btn1">Modifier le compte</button>
+    </div>
+    <br>
+  </div>
+
+  <br>
+</ion-content>

@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title><i class="fa fa-chevron-left icon"
+        style="float: left;width:20px;color:rgb(43, 42, 42);margin-top: 8px;margin-right:-70px;" (click)="go_back()">
+      </i>
+      <div style="text-align: center;">
+        <img src="../../assets/DonDuSang_Logo-Recovered.png" width="90px" /></div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="text-align:center;margin-top:90px;">
+
+    <div class="input-icons">
+      <i class="fa fa-pen icon"> </i>
+      <input class="input-field" type="text" placeholder="Nom & Prenom" name="object" [(ngModel)]="object.name" />
+    </div>
+
+    <div class="input-icons">
+      <i class="fa fa-envelope icon"> </i>
+      <input class="input-field" type="email" placeholder="Email" name="object" [(ngModel)]="object.email" />
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="comment" style="font-size: 16px;">Commentaire:</label>
+      <textarea name="object" [(ngModel)]="object.description" class="input-field" style="text-align: left;" cols="5"
+        rows="5" id="comment"></textarea>
+    </div>
+    <br>
+    <div class="input-icons">
+      <ion-button color="danger" style="width:160px;height: 48px;font-size: 16px;" (click)="submit()">Envoyer
+      </ion-button>
+    </div>
+
+  </div>
+</ion-content>

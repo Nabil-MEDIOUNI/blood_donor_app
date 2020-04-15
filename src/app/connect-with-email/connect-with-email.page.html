@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br><br>
+  <ion-card>
+    <ion-card-content>
+      <div style="text-align: center;">
+        <ion-icon style="font-size: 100px;margin-bottom: 20px;" name="lock"></ion-icon>
+        <br>
+        <h2 style="text-align: center;font-weight:bold;margin-bottom: 20px;">
+          Entrez Votre Adresse Mail
+        </h2>
+        <br /><br /><br /><br><br>
+      </div>
+      <form action="">
+        <div style="text-align: center;">
+          <div class="input-icons">
+            <i class="fa fa-envelope icon"> </i>
+            <input class="input-field" [(ngModel)]="user.email" name="user" type="email"
+              placeholder="quelqu'un@exemple.com" />
+          </div>
+        </div>
+        <br />
+        <div style="text-align: center;">
+          <ion-button (click)="login()" style="width: 138px;height: 38px;" color="danger">Valider
+          </ion-button>
+        </div>
+      </form>
+      <br /><br /><br /><br /><br /><br />
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>

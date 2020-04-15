@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title><i class="fa fa-chevron-left icon"
+        style="float: left;width:20px;color:rgb(43, 42, 42);margin-top: 22px;margin-right:-40px;" (click)="go_back()">
+      </i>
+      <div style="text-align: center;"><img src="../../assets/DonDuSang_Logo-Recovered.png" width="90px"></div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content><br /><br /><br />
+  <ion-list>
+    <ion-item style="margin-left: 10px;">
+      <ion-avatar style="width:80px;height:80px;" slot="start">
+        <img src="{{userData.photo}}" />
+      </ion-avatar>
+      <ion-label>
+        <h3><span
+            style="text-transform: capitalize;color: rgb(168, 0, 0);font-weight: bold;">{{userData.bloodType}}</span>
+          Donneur de Sang Nécessaire</h3>
+        <p style="text-transform: capitalize;font-weight: bold;margin:5px 0px;">{{userData.name}}</p>
+        <ion-button color="danger" style="width: 120px;height: 36px;">
+          <i class="fas fa-share-alt"></i>
+          <span style="margin-left: 8px;">Partager</span></ion-button>
+      </ion-label>
+    </ion-item><br />
+    <ion-item style="margin-left: 10px;">
+      <ion-label>
+        <h2>{{userData.description}}</h2>
+        <br />
+        <h4><i class="fas fa-tint" style="color:gray;margin:10px;"></i>{{userData.bloodType}}</h4>
+        <h4>
+          <i class="fas fa-map-marker-alt" style="color:gray;margin:10px;"></i>{{userData.village}}
+        </h4>
+        <h4>
+          <i class="fas fa-clock" style="color:gray;margin:10px;"></i>{{userData.date}}
+        </h4>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title><i class="fa fa-chevron-left icon"
+        style="float: left;width:20px;color:rgb(43, 42, 42);margin-right:-93px;margin-top:29px;" (click)="go_back()">
+      </i>
+      <div style="text-align: center;"><img style="margin-top:10px;" src="../../assets/DonDuSang_Logo-Recovered.png"
+          width="90px"></div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <h5 style="color:rgb(185, 121, 0);">En Cours</h5>
+    </ion-list-header>
+    <ion-card>
+      <ion-card-content>
+        <div style="display: flex;">
+          <ion-avatar>
+            <img src="{{userData.photo}}" alt="">
+          </ion-avatar>
+          <div (click)="details()" style="margin-left:25px;">
+            <h2 style="text-transform: capitalize;color: rgb(8, 8, 8);">{{userData.name}}</h2>
+            <h3 style="text-transform: capitalize;color: rgb(168, 0, 0);font-weight: bold;">{{userData.bloodType}}</h3>
+            <h3 style="text-transform: capitalize;color:rgb(15, 15, 15);">{{userData.village}}</h3>
+            <p style="text-transform: capitalize;color:rgb(15, 15, 15);">{{userData.date}}</p>
+          </div>
+          <div style="margin-left: 85px;margin-top: 20px;">
+            <ion-icon style="font-size: 30px;" name="trash" item-right (click)="delete()"></ion-icon>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+</ion-content> -->
